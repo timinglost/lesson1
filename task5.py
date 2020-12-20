@@ -9,3 +9,4 @@ if revenue > costs:
     print('Прибыль фирмы в расчете на одного сотрудника ', arrived / staff)
 else:
     print('Предприятие убыточно')
+    
