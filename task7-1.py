@@ -17,9 +17,9 @@ class Matrix:
     def __add__(self, a):
         self.a = a
         n1 = len(self.list1)
-        n2 = len(self.a)
+        n2 = len(a.list1)
         n11 = len(self.list1[0])
-        n22 = len(self.a[0])
+        n22 = len(a.list1[0])
         if n1 != n2 or n11 != n22:
             print('Матрицы разныне!')
         else:
@@ -28,7 +28,7 @@ class Matrix:
             while i < n1:
                 n = 0
                 while n < n11:
-                    self.list1[i][n] = self.list1[i][n] + self.a[i][n]
+                    self.list1[i][n] = self.list1[i][n] + a.list1[i][n]
                     n += 1
                 i += 1
 
@@ -42,7 +42,8 @@ print(b)
 d = Matrix([[12, 32, 32], [423, 23, 434], [65, 56, 34]])
 print(d)
 
-c = [[12, 32, 32], [423, 23, 434], [65, 56, 34]]
+# c = [[12, 32, 32], [423, 23, 434], [65, 56, 34]]
+c = Matrix([[12, 32, 32], [423, 23, 434], [65, 56, 34]])
 
 d + c
 a + c
